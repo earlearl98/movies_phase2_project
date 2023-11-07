@@ -1,12 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import MovieFav from "./MovieFav";
+import MovieList from "./MovieList";
+import { useState } from "react";
+export default function App() {
+  const [movieFav,setMovieFav] = useState([])
 
-function App() {
+
   return (
-    <div className="App">
-     
+    <div>
+      <MovieFav movieFav={movieFav} setMovieFav={setMovieFav} />
+      <MovieList movieFav={movieFav} setMovieFav={setMovieFav}/> 
+
+
     </div>
-  );
+  )
 }
 
-export default App;

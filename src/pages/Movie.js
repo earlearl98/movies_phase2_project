@@ -6,18 +6,16 @@ export default function Movie({movie}) {
     <div key={movie.title}>
 
       <div>
-        <img src={movie.poster_path} alt={`${movie.title} poster`} className='w-100'/>
+        <img src={movie.poster_url} alt={`${movie.title} poster`} className='img-fluid'/>
       </div>
 
       <div >
-               <h2>{movie.title}<small > <br/>Date of release:  {movie.release_date}</small></h2>
+               <h2>{movie.title}</h2>
                <p >{movie.overview}</p>
                
             </div>
             
             <hr />
-      
-
 
     </div>
   )

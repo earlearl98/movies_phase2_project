@@ -43,10 +43,10 @@ export default function MovieList({movieFav,setMovieFav}) {
       loading...</h1>
   }
   return (
-    <div>
+    <div className='container row mx-auto p-2'>
       <h1>MovieList</h1>
 
-      <div className='movie-container '>
+      <div className='movie-container col-md-3'>
         {movies.map(movie=> {
           const {id,title,overview}= movie 
           

@@ -1,28 +1,35 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../styles/Movie.css';
 
 
 export default function Movie({movie}) {
 
   return (
-    <div key={movie.title}>
+    <div key={movie.title} className="border border-dark-subtle movie-card rounded  ">
 
-      <div>
-        <img src={movie.poster_url} alt={`${movie.title} poster`} className='img-fluid'/>
+      <div className=' movie-image '>
+        <img src={movie.poster_url} alt={`${movie.title} poster`} className='img-fluid image'/>
       </div>
 
       <div >
         <Link to={`/movies/${movie.id}`}>
-               <h2>{movie.title}</h2>
-               
-
+               <div className='col-20 text-truncate'>
+                
+                <h6>{movie.title}</h6>
+                
+                </div>
+              
                </Link>
 
-               <p className=''>{movie.overview}</p>
-               
+               <div className='row'>
+
+               <p className='col-20 text-truncate'>{movie.overview}</p>
+
+               </div>
             </div>
             
-            <hr />
+            
 
     </div>
   )

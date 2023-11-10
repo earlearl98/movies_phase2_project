@@ -2,6 +2,7 @@ import Movie from './Movie';
 import React, { useState, useEffect } from 'react';
 import '../styles/MovieList.css';
 import Swal from "sweetalert2"
+import '../styles/Movie.css';
 
 
 export default function MovieList({movieFav,setMovieFav}) {
@@ -64,7 +65,7 @@ export default function MovieList({movieFav,setMovieFav}) {
       <h1>MovieList</h1>
 
     
-      <div className='movie-container'>
+      <div className='movie-container d-flex gap-3'>
         {movies.map(movie=> {
           const {id,title,overview}= movie
       
@@ -78,8 +79,8 @@ export default function MovieList({movieFav,setMovieFav}) {
               </div>
 
               
-              <div onClick={()=>handleOnClick(movie)}  className='card p-1 '>
-              <button className='btn btn-danger 'onClick={()=>removeMovie(movie.id)}>DELETE</button>
+              <div onClick={()=>handleOnClick(movie)}  className=''>
+              <button className='btn btn-danger delete 'onClick={()=>removeMovie(movie.id)}>DELETE</button>
               </div>
 
 

@@ -13,7 +13,7 @@
   /* background-color: antiquewhite; */
   padding: 0 50px;
   height: 100%;
-  color: white;
+  color: rgb(247, 247, 247);
   font-family: 'Alice', serif;
 }
 
@@ -30,6 +30,13 @@
 }
 .menu-container{
   flex:6;
+  margin-top: 300px;
+  align-content: center;
+  display: flexbox;
+ 
+  /* background-color: red; */
+
+  
   /* background-color: gray; */
 
 }
@@ -56,13 +63,18 @@
 .profile-container{
   flex:2;
   display: flex;
-  align-items: center;
+  align-items: right;
   justify-content: flex-end;
+  margin-left: 500px;
+
  
 }
 
 .profile-container-text{
   margin: 0 10px;
+  margin-left: 0px;
+  align-content: center;  
+ 
 
 }
 .profile-picture{
@@ -70,5 +82,24 @@
   height: 32px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 6px;
+}
+
+.item1{
+  width: 200px; 
+  margin: 0 auto;
+  display: flex;
+  margin-left: 200px;
+  flex-wrap: wrap;
+  font-size: larger;
+  text-decoration:solid;
+  font-style: oblique;
+  
+}
+.profile-text{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 2px;
+  
 }

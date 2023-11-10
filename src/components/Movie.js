@@ -14,7 +14,7 @@ export default function Movie({movie}) {
 
       <div >
         <Link to={`/movies/${movie.id}`}>
-               <div className='col-20 text-truncate'>
+               <div className='col-20 text-truncate d-flex mx-3'>
                 
                 <h6>{movie.title}</h6>
                 
@@ -24,7 +24,7 @@ export default function Movie({movie}) {
 
                <div className='row'>
 
-               <p className='col-20 text-truncate'>{movie.overview}</p>
+               <p className='col-22 text-truncate p-4'>{movie.overview}</p>
 
                </div>
             </div>

@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Swal from "sweetalert2"
+import '../styles/Movie.css';
 export default function UpdateM({moviex}) {
 
   const[title,setTitle] = useState()
@@ -23,7 +24,6 @@ function movieSubmit(e){
     .then(res => res.json()) 
     .then(res => {
       
-      console.log("data",moviex)
 
       Swal.fire({
         position: "center",
@@ -49,12 +49,14 @@ function movieSubmit(e){
   };
 
   return (
-    <div className='container mt-5'>
+    <div className='container mt5 row'>
 
-      <h4>CHANGE</h4>
+      <div className='col-md-6'>
+        <h4>CHANGE</h4>
+        </div>
 
 
-      <div >
+      <div className='col-md-6'>
         <form onSubmit={movieSubmit}>
 
             <div className="mb-3">
@@ -68,14 +70,14 @@ function movieSubmit(e){
               <input type="text" value={overview || moviex.overview} onChange={e=>setOverview(e.target.value)}  className="form-control" required/>
             </div>
 
-            <div className="mb-3">
+            <div className="mb-3 ">
               <label className="form-label">Movie_URL</label>
-              <input type="url" value={posterurl || moviex.poster_url } onChange={e=>setPosterurl(e.target.value)}  className="form-control" required />
+              <input type="url" value={posterurl || moviex.poster_url } onChange={e=>setPosterurl(e.target.value)}  className="form-control " required />
             </div>
 
 
 
-            <button type="submit" class="btn btn-primary">CHANGE</button>
+            <button  type="submit" class="btn btn-primary">CHANGE</button>
             </form>
 
         

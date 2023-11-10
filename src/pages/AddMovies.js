@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Swal from "sweetalert2"
+import '../styles/Movie.css';
 export default function AddMovies() {
 
   const[title,setTitle] = useState()
@@ -56,11 +57,15 @@ function movieSubmit(e){
 
 
     <div className='container row  '>
+ 
 
+       <div className='addnew'>
 
       <div className='col-md-6'>
 
         <h1>Add Movies</h1>
+
+        <hr/>
 
       </div>
 
@@ -92,7 +97,8 @@ function movieSubmit(e){
       </div>
      
 
-     
+      </div>
+
    </div>
    
    </div>

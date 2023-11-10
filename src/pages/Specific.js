@@ -3,6 +3,7 @@ import Movie from '../components/Movie'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import UpdateM from '../components/UpdateM'
+import '../styles/Movie.css';
 export default function Specific() {
 
 
@@ -26,20 +27,37 @@ export default function Specific() {
 
   
   return (
-    <div className='container row '>
+    <div className='' >
 
-      <div className='col-md-6 image-fluid'>
-      <img src={moviex.poster_url} alt='loading...' />
+
+    <div className='container mt-2 '>
+      <div className=''>
+      <div >
+
+      <img className='col-md-2 img-fluid mt-6 imagex' src={moviex.poster_url} alt='loading...' />
+
         </div>
 
-      <div className='col-md-6'> 
+      <div className='col-md-6 '> 
       
-        <h1 className='bg-success'>{moviex.title}</h1>
+        <h1 className=''>{moviex.title}</h1>
         <p> {moviex.overview}</p>
+
+       </div>
+
+        <div className='change'>
+          
+          <hr/>
+        
+        </div>
+
+
+    
+        <div className=''>
         <UpdateM moviex={moviex}/>
+       </div>
     </div>
-
-
+    </div>
       </div>
 
   )

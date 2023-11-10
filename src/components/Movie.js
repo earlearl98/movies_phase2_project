@@ -6,7 +6,7 @@ import '../styles/Movie.css';
 export default function Movie({movie}) {
 
   return (
-    <div key={movie.title} className="border border-dark-subtle movie-card rounded  ">
+    <div key={movie.title} className="border border-dark-subtle movie-card rounded ">
 
       <div className=' movie-image '>
         <img src={movie.poster_url} alt={`${movie.title} poster`} className='img-fluid image'/>
@@ -22,9 +22,9 @@ export default function Movie({movie}) {
               
                </Link>
 
-               <div className='row'>
+               <div className=' row'>
 
-               <p className='col-22 text-truncate p-4'>{movie.overview}</p>
+               <p className='overview col-22 text-truncate p-4'>{movie.overview}</p>
 
                </div>
             </div>

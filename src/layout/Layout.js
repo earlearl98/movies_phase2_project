@@ -7,7 +7,7 @@ import '../styles/Layout.css';
 export default function Layout() {
   return (
 
-    <div>
+    <div className="bg-dark">
       <Navbar />
 
       <Sidebar/>

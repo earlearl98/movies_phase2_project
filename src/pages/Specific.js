@@ -14,7 +14,7 @@ export default function Specific() {
    useEffect(() => {
     
     fetch(`https://movies-app-4lwq.onrender.com/movies/${id}`)
-    .then(response => response.json()) // Parse the JSON response
+    .then(response => response.json()) 
     .then(response => {
       setMoviex(response);
       
@@ -30,11 +30,11 @@ export default function Specific() {
     <div className='' >
 
 
-    <div className='container mt-2 '>
+    <div className='container mt-2  '>
       <div className=''>
       <div >
 
-      <img className='col-md-2 img-fluid mt-6 imagex' src={moviex.poster_url} alt='loading...' />
+      <img className='col-md-2 img-fluid  imagex' src={moviex.poster_url} alt='loading...' />
 
         </div>
 

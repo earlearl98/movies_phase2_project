@@ -5,21 +5,12 @@ import Swal from "sweetalert2"
 import '../styles/Movie.css';
 
 
-export default function MovieList({movieFav,setMovieFav}) {
+export default function MovieList() {
   const [movies, setMovies] = useState([]);
-
-
   const [isLoading,setIsLoading ] = useState(true)
-  // Fetch movies data from API and store it in the state variable "movies"
-  function handleOnClick(bt){
-    if (movieFav.filter(el=>el.id===bt.id).length === 0){
-      setMovieFav([...movieFav,bt])
-    }
-  }
-
-
-  function removeMovie(id) {
-    setMovies(movies.filter(movie=>movie.id !== id))
+  
+ function removeMovie(id) {
+    
     fetch(`https://movies-app-4lwq.onrender.com/movies/${id}`,{
       method: "DELETE",
       headers:{
@@ -74,13 +65,12 @@ export default function MovieList({movieFav,setMovieFav}) {
             <div className=''>
             
               <div >
-              <Movie key={movie.id} movie={movie} moviesId={movie.id}
-              movieFav={movieFav} setMovieFav={setMovieFav}/>
+              <Movie key={movie.id} movie={movie} moviesId={movie.id}/>
               </div>
 
               
-              <div onClick={()=>handleOnClick(movie)}  className=''>
-              <button className='btn btn-danger delete 'onClick={()=>removeMovie(movie.id)}>DELETE</button>
+              <div className=''>
+              <button className='btn btn-danger delete ' type='button' onClick={()=>removeMovie(movie.id)}>DELETE</button>
               </div>
 
 

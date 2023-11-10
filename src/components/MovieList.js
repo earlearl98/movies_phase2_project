@@ -10,6 +10,8 @@ export default function MovieList() {
   const [isLoading,setIsLoading ] = useState(true)
   
  function removeMovie(id) {
+
+  
     
     fetch(`https://movies-app-4lwq.onrender.com/movies/${id}`,{
       method: "DELETE",

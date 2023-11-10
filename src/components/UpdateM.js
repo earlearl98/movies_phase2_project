@@ -23,7 +23,8 @@ function movieSubmit(e){
   })
     .then(res => res.json()) 
     .then(res => {
-      
+      console.log('Movie submitted successfully:', res);
+
 
       Swal.fire({
         position: "center",
@@ -49,7 +50,7 @@ function movieSubmit(e){
   };
 
   return (
-    <div className='container mt5 row'>
+    <div className='container mb-5 row'>
 
       <div className='col-md-6'>
         <h4>CHANGE</h4>
@@ -61,23 +62,23 @@ function movieSubmit(e){
 
             <div className="mb-3">
               <label  className="form-label">Title</label>
-              <input type="text" value={title || moviex.title} onChange={e=>setTitle(e.target.value)} className="form-control" required />
+              <input type="text" value={title || moviex.title} onChange={e=>setTitle(e.target.value)} className="form-control" required placeholder='Movie Title...' />
               
             </div>
 
             <div className="mb-3">
               <label className="form-label">OVERVIEW</label>
-              <input type="text" value={overview || moviex.overview} onChange={e=>setOverview(e.target.value)}  className="form-control" required/>
+              <input type="text" value={overview || moviex.overview} onChange={e=>setOverview(e.target.value)}  className="form-control" required placeholder='Movie overview...'/>
             </div>
 
             <div className="mb-3 ">
               <label className="form-label">Movie_URL</label>
-              <input type="url" value={posterurl || moviex.poster_url } onChange={e=>setPosterurl(e.target.value)}  className="form-control " required />
+              <input type="url" value={posterurl || moviex.poster_url } onChange={e=>setPosterurl(e.target.value)}  className="form-control " required placeholder='Movie Image_url...' />
             </div>
 
 
 
-            <button  type="submit" class="btn btn-primary">CHANGE</button>
+            <button type="submit" className="btn btn-primary" >Submit</button>
             </form>
 
         

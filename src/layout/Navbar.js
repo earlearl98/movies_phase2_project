@@ -22,9 +22,7 @@ export default function Navbar() {
           <Link className="nav-link  text2"  to="/about">ABOUT</Link>
         </li>
         
-        // <li className="nav-item">
-        //   <Link className="nav-link text2" to="/movies/:id">MOVIE</Link>
-        // </li>
+       
 
         <li className="nav-item">
           <Link className="nav-link text2" to="/addmovies">NEW </Link>

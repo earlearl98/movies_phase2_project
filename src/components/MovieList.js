@@ -63,14 +63,14 @@ export default function MovieList({movieFav,setMovieFav}) {
     <div className=''>
       <h1>MovieList</h1>
 
-     <div className='container row '>
-      <div className='movie-container col-md-2  p-2'>
+    
+      <div className='movie-container'>
         {movies.map(movie=> {
           const {id,title,overview}= movie
       
           console.log(newArray);
           return (
-            <div className='movie-container1 row gap p-3'>
+            <div className=''>
             
               <div >
               <Movie key={movie.id} movie={movie} moviesId={movie.id}
@@ -87,7 +87,7 @@ export default function MovieList({movieFav,setMovieFav}) {
         )
           })}
       <div/> 
-      </div>
+   
       </div>
   </div>
   );

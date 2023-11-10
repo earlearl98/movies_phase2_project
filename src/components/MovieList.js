@@ -54,24 +54,24 @@ export default function MovieList() {
       loading...</h1>
   }
   return (
-    <div className=''>
+    <div >
       <h1>MovieList</h1>
 
     
       <div className='movie-container d-flex gap-3'>
         {movies.map(movie=> {
-          const {id,title,overview}= movie
+          
       
           console.log(newArray);
           return (
-            <div className=''>
+            <div >
             
               <div >
               <Movie key={movie.id} movie={movie} moviesId={movie.id}/>
               </div>
 
               
-              <div className=''>
+              <div >
               <button className='btn btn-danger delete ' type='button' onClick={()=>removeMovie(movie.id)}>DELETE</button>
               </div>
 

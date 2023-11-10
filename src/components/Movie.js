@@ -8,7 +8,7 @@ export default function Movie({movie}) {
   return (
     <div key={movie.title} className="border border-dark-subtle movie-card rounded ">
 
-      <div className=' movie-image '>
+      <div className='movie-image '>
         <img src={movie.poster_url} alt={`${movie.title} poster`} className='img-fluid image'/>
       </div>
 

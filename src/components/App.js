@@ -1,14 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
 import Layout from "../layout/Layout";
-
 import Home from "../pages/Home";
 import Specific from "../pages/Specific";
 import AddMovies from "../pages/AddMovies";
 import About from "../pages/About";
 
 export default function App() {
-  const [movieFav,setMovieFav] = useState([])
+ 
 
 
   return (

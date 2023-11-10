@@ -58,7 +58,7 @@ function movieSubmit(e){
 
 
       <div className='col-md-6'>
-        <form onSubmit={movieSubmit}>
+        <form onSubmit={movieSubmit} >
 
             <div className="mb-3">
               <label  className="form-label">Title</label>
@@ -76,9 +76,10 @@ function movieSubmit(e){
               <input type="url" value={posterurl || moviex.poster_url } onChange={e=>setPosterurl(e.target.value)}  className="form-control " required placeholder='Movie Image_url...' />
             </div>
 
+            
+            <button type="submit" className="btn btn-primary" onClick={()=>movieSubmit(moviex.id)}>Submit </button>
 
 
-            <button type="submit" className="btn btn-primary" >Submit</button>
             </form>
 
         

@@ -27,5 +27,3 @@ export default function Layout() {
   )
 }
 
-
-// id='main-container' className='main-container container mx-auto layout mid-height 80vh bg-dark text-white'

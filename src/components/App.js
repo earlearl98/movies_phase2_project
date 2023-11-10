@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Layout from "../layout/Layout";
-import UpdateMovies from "../pages/UpdateMovies";
+
 import Home from "../pages/Home";
 import Specific from "../pages/Specific";
 import AddMovies from "../pages/AddMovies";
@@ -21,7 +21,7 @@ export default function App() {
 
           <Route index element={<Home />}/>
 
-        <Route path="updatemovies" element={<UpdateMovies />} />
+      
 
           <Route path="about" element={<About />} />
 
@@ -41,5 +41,3 @@ export default function App() {
   )
 }
 
-{/* <MovieFav movieFav={movieFav} setMovieFav={setMovieFav} />
-      <MovieList movieFav={movieFav} setMovieFav={setMovieFav}/> */}

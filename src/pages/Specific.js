@@ -23,7 +23,7 @@ export default function Specific() {
       
     })
     .catch(error => console.error('Error fetching data:', error));
-  }, []); 
+  }, [id]); 
 
 
   
